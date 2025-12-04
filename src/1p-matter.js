@@ -1,11 +1,11 @@
 /* --------- 방향키 이벤트 --------- */
-
 document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowRight") window.location.href = "2p.html";
   if (e.key === "ArrowLeft") window.location.href = "main.html";
 });
 
-// src/1p-matter.js
+// 여기부터 Matter.js
+console.log("1p-matter.js top reached");
 
 const {
   Engine,
@@ -20,13 +20,15 @@ const {
 } = Matter;
 
 window.addEventListener("load", () => {
-  console.log("1p-matter.js loaded!");
+  console.log("window load in 1p-matter.js");
 
   // 0. 기본 DOM 요소 찾기
   const canvasEl = document.querySelector(".canvas");
   const newsImgs = Array.from(
     document.querySelectorAll("#news_container img")
   );
+
+  console.log("canvasEl:", !!canvasEl, "newsImgs:", newsImgs.length);
 
   if (!canvasEl) {
     console.warn("canvas (.canvas) 못 찾음");
