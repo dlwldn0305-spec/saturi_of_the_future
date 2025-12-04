@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>가제:사투리 프로젝트</title>
+  <link rel="stylesheet" href="./src/1-3p.css"> 
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'fbk2wub',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+</head>
+
+<body>
+  <img src=./1p/nextpage.svg id="nextpage_4p">
+
+  <div class="canvas">
+    <div class="explain" id="explain_4p">
+      서로 다른 방언이 뒤섞여 새로운 공통 방언을 <br>
+      만들어내는 코이네화(koineization) 현상처럼,
+    </div>
+
+    <div class="explain" id="explain_4p_1">
+      각 지역의 사투리는 서울에서<br>
+      공존하고 서로의 어휘와 말투를<br>
+      닮아가며 재구성될 것이다.
+    </div>
+
+    <div class="explain" id="explain_4p_3">
+      이러한 상호작용 속에서<br>사투리들은 점차
+    </div>
+
+    <div class="explain" id="explain_4p_4">
+      으로 재조합될 것이다.
+    </div>
+
+    <!-- Matter.js 블럭 영역 -->
+    <div class="block">
+      <canvas id="matter-canvas"></canvas>
+    </div>
+
+    <div id="blank"></div>
+  <img src="/background.svg" class="background" alt="background">
+    <img src="/explan.svg" id="explain_4p_5">
+
+  </div>
+
+</div>
+
+  <script type="module" src="./src/4p.js"></script>
+</body>
+</html>

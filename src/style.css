@@ -1,0 +1,197 @@
+body {
+  background:#F1F1F1;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  
+}
+
+.canvas{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;         /* 세로 스택 */
+  align-items: center;            /* 가로 가운데 */
+  justify-content: flex-start;    
+  --scale: min(calc(100vw / 1920), calc(100vh / 1080));
+  position: relative;
+}
+
+
+.title_stage{ 
+position: absolute;
+  top: 9%;
+  scale: 1.2;
+}
+
+.explain{
+  position: absolute;
+  left: 50%;
+  bottom: 20px;           /* 원하는 만큼 위로 띄우기 */
+  transform: translateX(-50%);
+}
+
+
+/* ===== 포스터 컨테이너: 고정 기준 크기 + 스케일 ===== */
+.poster_container{
+  display: flex;
+  position: relative;
+  margin-top: 150px;
+  width: 1320px;            
+  height: 720px;             
+  transform: scale(var(--scale));
+  transform-origin: center center;
+   transform: scale(0.925);
+}
+
+/* ===== 공통 포스터 베이스: 중앙에 겹치기 ===== */
+.poster_container > .poster{
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);  /* 정확히 중앙 */
+  width: 1320px;
+  height: 720px;
+
+  overflow: hidden;
+}
+
+#key_line{
+  opacity: 0%;
+}
+
+#jr_poster {
+top:5%;
+opacity: 0;
+}
+
+
+/* ===== 1번째 줄: 기본 flex 구조 ===== */
+.first_line{
+  height: 315px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* ===== 개별 블록 transform (예시) ===== */
+/* 아래로 내리고 싶으면 translateY(+px) */
+/* 위로 올리고 싶으면 translateY(-px) */
+
+.b1 { transform: translateY(0px); width: 160px;   
+  height: 190px;}
+.b2 { transform: translateY(60px); width: 160px;   
+  height: 190px;}
+.b3 { transform: translateY(0px); width: 160px;   
+  height: 190px;}
+.b4 { transform: translateY(-60px); width: 160px;   
+  height: 190px;}
+.b5 { transform: translateY(-120px); width: 160px;   
+  height: 190px;}
+.b6 { transform: translateY(0px); width: 160px;   
+  height: 190px;}
+.b7 { transform: translateY(-60px); width: 160px;  
+  height: 190px;}
+.b8 { transform: translateY(0px); width: 160px;
+  height: 189px;}
+
+/* 필요하면 나중에 애니메이션 용도로 transition 추가 */
+.first_line img {
+  transition: transform 0.3s ease;
+}
+
+.first_line img + img{
+  margin-left: -2px;   /* 두 번째부터 전부 -2px 겹치기 */
+}
+
+
+
+/* ===== 2번째 줄: 기본 flex 구조 ===== */
+.secound_line{
+  height: 308px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* 각 블럭 프레임 */
+.secound_line .block{
+  position: relative;
+  overflow: hidden;
+
+  /* ⬇️ 블럭 크기 (SVG 한 칸 크기에 맞게 조정해줘) */
+  width: 160px;   /* 예시 값, 파랑/핑크 칸 하나 너비 */
+  height: 190px;  /* 예시 값, 필요하면 160~180으로 수정 */
+  
+  transition: transform 0.4s ease;  /* 🔹 블럭 전체가 위아래로 움직이는 속도 */
+}
+
+/* 블럭들끼리 살짝 겹치기 */
+.secound_line .block + .block{
+  margin-left: -2px;
+}
+
+/* 프레임 안의 두 이미지 (경상도/전라도) */
+.block-img{
+  position: absolute;        /* ✅ 다시 absolute로 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.4s ease;   /* 🔹 프레임 안 슬라이드 속도 */
+}
+
+/* 시작 상태: 경상도 보이고 전라도는 아래 숨기기 */
+.img-ks{
+  transform: translateY(0);
+}
+.img-jr{
+  transform: translateY(100%);
+}
+
+
+
+
+/* 화살표 줄 페이드인 */
+.key_line{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.canvas.show-arrows .key_line{
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+/* 공통 삼각형 이미지 스타일 */
+.key_line img{
+  position: relative;
+  transition: transform 0.3s ease;
+  transform: translateY(0);   /* 기본은 0, 높이는 JS에서 조절 */
+}
+
+/* ===== 삼각형 개별 transform (예시) ===== */
+/*
+
+.k1 { transform: translateY(-60px); }
+.k2 { transform: translateY(-60px); }
+.k3 { transform: translateY(-60px); }
+.k4 { transform: translateY(-120px); }
+.k5 { transform: translateY(-180px); }
+.k6 { transform: translateY(-120px); }
+.k7 { transform: translateY(-120px); }
+.k8 { transform: translateY(-60px); }
+*/

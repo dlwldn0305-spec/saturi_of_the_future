@@ -1,0 +1,115 @@
+body {
+  background:#F1F1F1;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+
+.canvas{
+  width: 100vw;
+ min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+
+}
+
+#news_container {
+position: absolute;
+width: 100vw;
+height: 800px;
+bottom: 0;
+left:0;
+z-index: 1;
+
+}
+#news_container img {
+  display: inline-block; 
+}
+
+
+.explain {
+font-family: "rixsingose-pro", sans-serif;
+font-weight: 300;
+font-style: normal;
+  font-size: 50px;
+  line-height: 140%;
+  position: absolute;
+  top: 131px;
+  left: 60px;
+  z-index: 5;
+
+
+  opacity: 0;
+  animation: fadeUp .8s cubic-bezier(.33,.02,.2,1) forwards;
+  animation-delay: .2s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+#explain_1p{
+  color: #FF0561;
+}
+
+
+#simbol_1p{
+width: 400px;
+height: 400px;
+position: absolute;
+
+background-color: #FF0561;
+top: 60px;
+right: 120px;
+animation: fadeUp .8s cubic-bezier(.33,.02,.2,1) forwards;
+  animation-delay: 0.1s;
+}
+
+.nextpage{
+width: 50px;
+position: absolute;
+top: 509px;
+right: 30px;
+z-index: 1;
+opacity: 0;              /* 처음엔 안 보이게 */
+  pointer-events: none;    /* 클릭 안 되게 (필요 없으면 지워도 됨) */
+
+  animation: nextpage-show 1s ease-out 5s forwards,
+             nextpage-loop 1.5s ease-in-out 4s infinite;
+}
+
+@keyframes nextpage-show {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes nextpage-loop {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px); /* 살짝 오른쪽으로 이동 */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

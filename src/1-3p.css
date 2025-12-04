@@ -1,0 +1,346 @@
+body {
+  background:#F1F1F1;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+
+
+.canvas{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;  
+  --scale: min(calc(100vw / 1920), calc(100vh / 1080));
+  position: relative;
+}
+
+
+
+@keyframes bgToBlack {
+  0% {
+    background: #F1F1F1;  /* 기존 배경색 */
+  }
+  100% {
+    background: #161616;
+  }
+
+}
+
+
+#project_title {
+font-family: "rixsingose-pro", sans-serif;
+font-weight: 300;
+font-style: normal;
+color: #FF0561;
+  font-size: 20px;
+  line-height: 140%;
+  position: relative;
+  top: 60px;
+  left: 67px;
+  z-index: 2;
+}
+
+.explain {
+font-family: "rixsingose-pro", sans-serif;
+font-weight: 300;
+font-style: normal;
+  font-size: 50px;
+  line-height: 140%;
+  position: absolute;
+  top: 131px;
+  left: 60px;
+  z-index: 2;
+
+  opacity: 0;
+  animation: fadeUp .8s cubic-bezier(.33,.02,.2,1) forwards;
+  animation-delay: .2s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#typed-3p,
+#typed-3p span,
+.typed-cursor {
+  font-family: "rixsingose-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* 필요하면 부드럽게 렌더링 */
+#typed-3p {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+
+
+#explain_1p{
+  color: #FF0561;
+}
+#explain_2p{
+  color: #00B7AB;
+}
+#explain_3p{
+  color: #F6C500;
+}
+
+
+
+#explain_4p{
+  font-family: "rixsingose-pro", sans-serif;
+font-weight: 300;
+font-style: normal;
+  font-size: 50px;
+  line-height: 140%;
+  z-index: 2;
+  color: #ffffff;
+
+    top: 140px;
+}
+#explain_4p_1{
+  font-family: "rixsingose-pro", sans-serif;
+font-weight: 300;
+font-style: normal;
+  font-size: 50px;
+  line-height: 140%;
+  z-index: 2;
+  color: #ffffff;
+
+  top: 350px;
+  left: 370px;
+  opacity: 0;
+  animation: fadeUp .80s cubic-bezier(.33,.02,.2,1) forwards;
+  animation-delay: 1s;
+}
+
+#explain_4p_3{
+  font-family: "rixsingose-pro", sans-serif;
+font-weight: 300;
+font-style: normal;
+  font-size: 50px;
+  line-height: 140%;
+  z-index: 2;
+  color: #000000;
+
+    top: 1290px;
+}
+#explain_4p_4{
+  font-family: "rixsingose-pro", sans-serif;
+font-weight: 300;
+font-style: normal;
+  font-size: 50px;
+  line-height: 140%;
+  z-index: 2;
+  color: #000000;
+
+    top: 1600px;
+    left: 1230px;
+}
+
+#explain_4p_5{
+height: 45px;
+  z-index: 4;
+  position: relative;
+  top: 1850px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+#news_container {
+width: 100vw;
+height: 800px;
+bottom: 0;
+left:0;
+z-index: 1;
+}
+#news_container img {
+  display: inline-block; 
+}
+
+
+.simbol{
+width: 600px;
+position: absolute;
+
+top: 60px;
+right: 120px;
+  animation: fadeUp .8s cubic-bezier(.33,.02,.2,1) forwards;
+  animation-delay: 0.1s;
+}
+
+
+.nextpage{
+width: 50px;
+position: absolute;
+top: 509px;
+right: 40px;
+z-index: 1;
+
+  opacity: 0;              /* 처음엔 안 보이게 */
+  pointer-events: none;    /* 클릭 안 되게 (필요 없으면 지워도 됨) */
+
+  animation: nextpage-show 1s ease-out 5s forwards,
+             nextpage-loop 1.5s ease-in-out 4s infinite;
+}
+
+@keyframes nextpage-show {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes nextpage-loop {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px); /* 살짝 오른쪽으로 이동 */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#nextpage_3p{
+ animation: nextpage-show 3s ease-out 9s forwards,
+             nextpage-loop 1.5s ease-in-out 4s infinite;
+}
+
+@keyframes nextpage-show {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes nextpage-loop {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px); /* 살짝 오른쪽으로 이동 */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#nextpage_4p{
+width: 50px;
+position: absolute;
+top: 800px;
+ left: 50%;
+  transform: translateX(-50%);
+z-index: 2;
+
+  opacity: 0;              /* 처음엔 안 보이게 */
+  pointer-events: none; 
+
+  rotate: 90deg;
+  animation: nextpage-show 1.5s ease-out 2s forwards,
+             nextpage-loop 1.5s ease-in-out 4s infinite;
+}
+
+@keyframes nextpage-show {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes nextpage-loop {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px); /* 살짝 오른쪽으로 이동 */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+#blank {
+  position: absolute;
+  width: 100vw;
+  height: 240px;
+  background-color: #F1F1F1;
+  top:1769px;
+  z-index: 4;
+}
+.block {
+  scale: 0.95;
+position: absolute;
+top:1185px;
+left: 584px;
+z-index: 2;
+}
+
+#matter-canvas {
+  width: auto;
+  height: auto;
+}
+
+.background{
+  width: 1800px;
+  position: absolute;
+  z-index:1;
+}
+
+
+
+
+#matter2p {
+  position: absolute;     /* .canvas 기준 하단 */
+  left: 0;
+  right: 0;               /* ⇒ width 자동으로 100% */
+  bottom: 0;
+
+  width: 100%;            /* .canvas가 100vw 이면 결과적으로 화면 가로 꽉 */
+
+ 
+
+  border: none !important;
+  outline: none !important;
+  background: transparent;
+}
+

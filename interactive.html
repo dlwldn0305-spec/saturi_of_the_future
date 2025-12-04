@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>가제:사투리 프로젝트</title>
+  <link rel="stylesheet" href="./src/interactive.css"> 
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'fbk2wub',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+</head>
+
+<body>
+<img src=./interactive/main_title.svg id="main_title">
+<div id="explain">끝까지 살아남을 지역별 사투리를 바탕으로, 각 예시에 알맞은 표현 100개를 선별했다.<br>
+아래 보기들을 통해 표준어가 새로운 언어 패턴으로 재구성된 미래의 사투리를 직접 체험해보자. 
+</div>
+<div class="options">
+<a href="little_prince.html"><img src=./interactive/option1.svg id="option1"></a>
+<a href="decision_to_leave.html"><img src=./interactive/option2.svg id="option2"></a>
+<a href="chainsaw_man"><img src=./interactive/option3.svg id="option3"></a>
+</div>
+
+
+  <script type="module" src="./src/interactive.js"></script>
+</body>
+</html>

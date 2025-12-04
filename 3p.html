@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>가제:사투리 프로젝트</title>
+  <link rel="stylesheet" href="./src/1-3p.css"> 
+  <script>
+  (function(d) {
+    var config = {
+      kitId: 'fbk2wub',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+
+</head>
+
+<body>
+<div class="canvas">
+
+  <img src="./1p/simbol_3p.svg" class="simbol">
+   <img src=./1p/nextpage.svg class="nextpage" id="nextpage_3p">
+
+ 
+    <div class="explain" id="explain_3p">
+      <span id="typed-3p"></span>
+    </div>
+
+
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script type="module" src="./src/3p.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "saturi-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tts": "node server.cjs"
+  },
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^6.4.0",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "matter-js": "^0.20.0"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}
