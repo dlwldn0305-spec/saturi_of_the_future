@@ -6,7 +6,6 @@ document.addEventListener("keydown", (e) => {
 });
 
 // src/1p-matter.js
-import Matter from "matter-js";
 
 const {
   Engine,
