@@ -65,63 +65,63 @@ window.addEventListener("load", () => {
   const textureGroups = [
     // basic 줄
     [
-      "./public/basic/1-1.svg",
-      "./public/basic/1-2.svg",
-      "./public/basic/1-3.svg",
-      "./public/basic/1-4.svg",
-      "./public/basic/1-5.svg",
-      "./public/basic/1-6.svg",
-      "./public/basic/1-7.svg"
+      "./basic/1-1.svg",
+      "./basic/1-2.svg",
+      "./basic/1-3.svg",
+      "./basic/1-4.svg",
+      "./basic/1-5.svg",
+      "./basic/1-6.svg",
+      "./basic/1-7.svg"
     ],
     // ks 줄 (2-*)
     [
-      "./public/ks/2-1.svg",
-      "./public/ks/2-2.svg",
-      "./public/ks/2-3.svg",
-      "./public/ks/2-4.svg",
-      "./public/ks/2-5.svg",
-      "./public/ks/2-6.svg",
-      "./public/ks/2-7.svg"
+      "./ks/2-1.svg",
+      "./ks/2-2.svg",
+      "./ks/2-3.svg",
+      "./ks/2-4.svg",
+      "./ks/2-5.svg",
+      "./ks/2-6.svg",
+      "./ks/2-7.svg"
     ],
     // jr 줄 (3-*)
     [
-      "./public/jr/3-1.svg",
-      "./public/jr/3-2.svg",
-      "./public/jr/3-3.svg",
-      "./public/jr/3-4.svg",
-      "./public/jr/3-5.svg",
-      "./public/jr/3-6.svg",
-      "./public/jr/3-7.svg"
+      "./jr/3-1.svg",
+      "./jr/3-2.svg",
+      "./jr/3-3.svg",
+      "./jr/3-4.svg",
+      "./jr/3-5.svg",
+      "./jr/3-6.svg",
+      "./jr/3-7.svg"
     ],
     // kw 줄 (4-*)
     [
-      "./public/kw/4-1.svg",
-      "./public/kw/4-2.svg",
-      "./public/kw/4-3.svg",
-      "./public/kw/4-4.svg",
-      "./public/kw/4-5.svg",
-      "./public/kw/4-6.svg",
-      "./public/kw/4-7.svg"
+      "./kw/4-1.svg",
+      "./kw/4-2.svg",
+      "./kw/4-3.svg",
+      "./kw/4-4.svg",
+      "./kw/4-5.svg",
+      "./kw/4-6.svg",
+      "./kw/4-7.svg"
     ],
     // cc 줄 (5-*)
     [
-      "./public/cc/5-1.svg",
-      "./public/cc/5-2.svg",
-      "./public/cc/5-3.svg",
-      "./public/cc/5-4.svg",
-      "./public/cc/5-5.svg",
-      "./public/cc/5-6.svg",
-      "./public/cc/5-7.svg"
+      "./cc/5-1.svg",
+      "./cc/5-2.svg",
+      "./cc/5-3.svg",
+      "./cc/5-4.svg",
+      "./cc/5-5.svg",
+      "./cc/5-6.svg",
+      "./cc/5-7.svg"
     ],
     // jj 줄 (6-*)
     [
-      "./public/jj/6-1.svg",
-      "./public/jj/6-2.svg",
-      "./public/jj/6-3.svg",
-      "./public/jj/6-4.svg",
-      "./public/jj/6-5.svg",
-      "./public/jj/6-6.svg",
-      "./public/jj/6-7.svg"
+      "./jj/6-1.svg",
+      "./jj/6-2.svg",
+      "./jj/6-3.svg",
+      "./jj/6-4.svg",
+      "./jj/6-5.svg",
+      "./jj/6-6.svg",
+      "./jj/6-7.svg"
     ]
   ];
 
