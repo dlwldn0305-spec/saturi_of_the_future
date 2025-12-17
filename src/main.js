@@ -77,14 +77,14 @@ const DIALECTS = {
     triangleTransforms: [-120, -120, -120, -120, -180, -180, -120, -120],
     trianglePattern: ["down", "up", "right", "right", "up", "down", "down", "up"],
     audio: [
-      "./mainpage/audio/toypiano_5.wav",
-      "./mainpage/audio/toypiano_3.wav",
-      "./mainpage/audio/toypiano_5.wav",
-      "./mainpage/audio/toypiano_6.wav",
-      "./mainpage/audio/toypiano_7.wav",
       "./mainpage/audio/toypiano_4.wav",
       "./mainpage/audio/toypiano_5.wav",
-      "./mainpage/audio/toypiano_4.wav"
+      "./mainpage/audio/toypiano_5.wav",
+      "./mainpage/audio/toypiano_5.wav",
+      "./mainpage/audio/toypiano_7.wav",
+      "./mainpage/audio/toypiano_5.wav",
+      "./mainpage/audio/toypiano_4.wav",
+      "./mainpage/audio/toypiano_5.wav"
     ]
   },
 
@@ -106,10 +106,10 @@ const DIALECTS = {
     trianglePattern: ["up", "down", "up", "down", "up", "down", "up", "down"],
     audio: [
       "./mainpage/audio/toypiano_5.wav",
-      "./mainpage/audio/toypiano_3.wav",
+      "./mainpage/audio/toypiano_4.wav",
       "./mainpage/audio/toypiano_5.wav",
-      "./mainpage/audio/toypiano_6.wav",
-      "./mainpage/audio/toypiano_7.wav",
+      "./mainpage/audio/toypiano_4.wav",
+      "./mainpage/audio/toypiano_5.wav",
       "./mainpage/audio/toypiano_4.wav",
       "./mainpage/audio/toypiano_5.wav",
       "./mainpage/audio/toypiano_4.wav"
@@ -133,14 +133,14 @@ const DIALECTS = {
     triangleTransforms: [-120, -120, -120, -120, -180, -120, -180, -120],
     trianglePattern: ["right", "right", "right", "up", "down", "up", "down", "down"],
     audio: [
-      "./mainpage/audio/toypiano_5.wav",
-      "./mainpage/audio/toypiano_3.wav",
-      "./mainpage/audio/toypiano_5.wav",
-      "./mainpage/audio/toypiano_6.wav",
-      "./mainpage/audio/toypiano_7.wav",
+      "./mainpage/audio/toypiano_4.wav",
+      "./mainpage/audio/toypiano_4.wav",
       "./mainpage/audio/toypiano_4.wav",
       "./mainpage/audio/toypiano_5.wav",
-      "./mainpage/audio/toypiano_4.wav"
+      "./mainpage/audio/toypiano_4.wav",
+      "./mainpage/audio/toypiano_5.wav",
+      "./mainpage/audio/toypiano_4.wav",
+      "./mainpage/audio/toypiano_3.wav"
     ]
   }
 };

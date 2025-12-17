@@ -35,6 +35,18 @@ left:60px;
   bottom: 100px;           /* 원하는 만큼 위로 띄우기 */
   transform: translateX(-50%);
 }
+.explain2{
+  font-family: "rixsingose-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 150%;
+
+  position: absolute;
+  left: 50px;
+  bottom: 50px; 
+  color: #c3c3c3;          /* 원하는 만큼 위로 띄우기 */
+}
 
 
 .options {
@@ -132,12 +144,6 @@ left:60px;
 }
 
 
-.listen {
-  position: absolute;
-  bottom: 50px;
-  right: 60px; /* 원하는 위치 */
-  cursor: pointer;
-}
 
 /* ===== 단어 슬롯 (필수) ===== */
 .word-slot{

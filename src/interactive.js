@@ -1,5 +1,8 @@
 console.log("interactive.js loaded");
-
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight') window.location.href = "index.html";
+  if (e.key === 'ArrowLeft') window.location.href = "jj_zine.html";
+});
 /* =========================
    AUDIO CONFIG
    ========================= */
@@ -8,7 +11,7 @@ const AUDIO_BASE = "./mainpage/audio/";
 // 🔥 여기만 줄이면 빨라짐 (ms)
 const SOUND_GAP = 200;
 
-// ✅ key: "이미지 src(상대경로 그대로)"
+// ✅ key: "이미지 src(상대경로 그a대로)"
 // ✅ value: "재생할 m4a 파일명 배열" (AUDIO_BASE 기준)
 const AUDIO_MAP = {
   /* =========================
