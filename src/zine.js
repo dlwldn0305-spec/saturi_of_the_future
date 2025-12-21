@@ -122,6 +122,20 @@ function initMatter() {
 
   // ✅ 마우스 드래그
   const mouse = Mouse.create(render.canvas);
+    // ✅ (중요) Matter가 canvas 위에서 휠 스크롤을 막는 문제 해결
+  // canvas 위에 마우스가 있으면 wheel 이벤트를 Matter가 잡아먹어서 페이지 스크롤이 멈춘 것처럼 보임
+  try {
+    const wheelEvents = ["wheel", "mousewheel", "DOMMouseScroll"];
+    wheelEvents.forEach((evt) => {
+      render.canvas.removeEventListener(evt, mouse.mousewheel);
+    });
+  } catch (err) {
+    console.warn("[Matter] wheel unbind fail", err);
+  }
+
+  // ✅ 터치패드/모바일 스크롤 허용
+  render.canvas.style.touchAction = "pan-y";
+
 
   // Render pixelRatio랑 반드시 동일하게
   mouse.pixelRatio = pixelRatio;
@@ -270,14 +284,33 @@ function setupInput() {
   if (window.__dialectInputBound) return;
   window.__dialectInputBound = true;
 
+  const canvas = document.querySelector("#matter-container canvas");
+
+  // ✅ 입력칸 클릭/드래그 때 캔버스가 가로채지 않게
+  inputEl.addEventListener("pointerdown", (e) => {
+    e.stopPropagation();
+  });
+
+  inputEl.addEventListener("focus", () => {
+    if (canvas) canvas.style.pointerEvents = "none";
+  });
+
+  inputEl.addEventListener("blur", () => {
+    if (canvas) canvas.style.pointerEvents = "auto";
+  });
+
+  // 엔터로 저장
   inputEl.addEventListener("keydown", (e) => {
     if (e.isComposing) return;
+
     if (e.key === "Enter") {
       e.preventDefault();
       saveText();
     }
   });
 }
+
+
 
 // -----------------------------
 // 7. 초기화 (Matter + Firestore) → 스크롤 시 시작
