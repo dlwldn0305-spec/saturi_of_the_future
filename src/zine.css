@@ -468,7 +468,35 @@ width: 400px;
   box-sizing: border-box;  
 }
 
+.ps{
+  font-family: "rixsingose-pro", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 150%;
+  color: #B1B1B1;
 
+  position: absolute;
+}
+#ps_ks{
+  top: 780px;
+  left: 780px;
+}
+#ps_jr{
+  top: 730px;
+  left: 1215px;
+}
+#ps_cc{
+  top: 730px;
+  left: 1215px;
+}
+#ps_kw{
+  top: 630px;
+  left: 780px;
+}
+#ps_jj{
+  top: 730px;
+  left: 1215px;
+}
 .hay{
   position: absolute;
 
